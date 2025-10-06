@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Constantin & Asociados - Contadores Públicos</title>
+  <meta name="description" content="Estudio Contable con más de 40 años de experiencia. Asesoramiento contable, impositivo, laboral y financiero." />
+  <style>
+    :root {
+      --primary-color: #1a3a5d; /* Azul corporativo */
+      --secondary-color: #f4f7f6; /* Fondo claro */
+      --accent-color: #d4a017; /* Dorado para acentos */
+      --text-color: #333;
+      --light-text: #fff;
+      --card-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    /* --- Header y Navegación --- */
+    .header {
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(rgba(26, 58, 93, 0.85), rgba(26, 58, 93, 0.85)), url('https://source.unsplash.com/1600x900/?office,business') no-repeat center center/cover;
+      color: var(--light-text);
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    /* --- Secciones Generales --- */
+    .section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+    
+    .section-content {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+    }
+
+    /* --- Sobre Nosotros / Nuestro Estudio --- */
+    #about {
+        background: #fff;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: left;
+      margin-top: 40px;
+    }
+    .value-item {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid var(--accent-color);
+    }
+    .value-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    /* --- Por qué elegirnos --- */
+    #why-us .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        text-align: left;
+    }
+    .feature-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: var(--card-shadow);
+    }
+     .feature-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+     }
+
+    /* --- Servicios --- */
+    #services {
+      background: #fff;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      text-align: left;
+    }
+    .service-card {
+      background: var(--secondary-color);
+      padding: 30px;
+      border-radius: 8px;
+      border-bottom: 5px solid var(--primary-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--card-shadow);
+    }
+    .service-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    /* --- Contacto --- */
+    #contact {
+        background: var(--primary-color);
+        color: var(--light-text);
+        padding: 60px 0;
+    }
+    #contact .section-title {
+        color: var(--light-text);
+    }
+    .contact-info {
+        font-size: 18px;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+    .contact-info a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .footer p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 18px; }
+      .section-title { font-size: 28px; }
+      .navbar { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="#" class="logo">Constantin & Asociados</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Nos convertimos en el aliado de tu empresa</h1>
+        <p>"D' origine suisse depuis 1981, au service de nos clients"</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Nuestro Estudio</h2>
+        <div class="section-content">
+            <p>En Constantin & Asociados nos enfocamos en acompañar a nuestros clientes en el desarrollo y crecimiento de sus proyectos y empresas. Confiamos que el espíritu emprendedor es algo fundamental para el crecimiento y mejora de nuestra sociedad. Sabemos el enorme esfuerzo que implica crear algo inspirador desde cero, ya que muchas veces esto implica muchos desafíos y dilemas que van apareciendo a través del camino. Por eso nos propusimos desde nuestros comienzos ser un aliado en el que puedan confiar plenamente. A lo largo de nuestra trayectoria de más de 40 años, descubrimos que esto se logra a través de un compromiso férreo en nuestra vocación de servicio y de valorar por sobre todo a nuestros clientes, brindándoles un asesoramiento ejemplar y de calidad.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Misión</h4>
+                <p>Contribuir con el ejercicio profesional a través de nuestra vocación de servicio hacia la sociedad, enfocándonos en potenciar emprendedores e idealistas para el progreso de nuestra comunidad.</p>
+            </div>
+            <div class="value-item">
+                <h4>Visión</h4>
+                <p>Nuestra meta es colaborar con el éxito y crecimiento de nuestros clientes.</p>
+            </div>
+            <div class="value-item">
+                <h4>Valores</h4>
+                <p>Actitud de servicio, Innovación, Excelencia, Compromiso, Calidez y Pasión en todo lo que hacemos.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="why-us" class="section">
+      <div class="container">
+        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Experiencia Comprobada</h3>
+                <p>Más de 40 años de experiencia en el rubro y las opiniones de nuestros clientes avalan nuestro trabajo.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Transparencia y Calidez</h3>
+                <p>Nos enfocamos en crear relaciones de confianza con nuestros clientes.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Profesionalismo</h3>
+                <p>Brindamos servicios de calidad, siempre enfocándonos en un buen acompañamiento de tu negocio.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Adaptabilidad</h3>
+                <p>Personalizamos nuestro servicio a medida de tu empresa y de acorde a tus necesidades.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Innovación</h3>
+                <p>Siempre tratamos de estar a la altura de las nuevas tecnologías y actualizaciones del mundo Contable-financiero.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Lo Que Hacemos Mejor</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Servicios Contables</h3>
+            <p>Confeccionamos Balances a medida para tu empresa, organizamos tus números y brindamos información clave para la toma de decisiones.</p>
+          </div>
+          <div class="service-card">
+            <h3>Servicios de Auditoría</h3>
+            <p>Mejoramos la gestión de tu empresa, enfocándonos en el control y la calidad de los procesos.</p>
+          </div>

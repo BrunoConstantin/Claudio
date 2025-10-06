@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Constantin & Asociados - Contadores Públicos</title>
+  <meta name="description" content="Estudio Contable con más de 40 años de experiencia. Asesoramiento contable, impositivo, laboral y financiero." />
+  <style>
+    :root {
+      --primary-color: #1a3a5d; /* Azul corporativo */
+      --secondary-color: #f4f7f6; /* Fondo claro */
+      --accent-color: #d4a017; /* Dorado para acentos */
+      --text-color: #333;
+      --light-text: #fff;
+      --card-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* --- Header y Navegación --- */
+    .header {
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-menu li {
+      margin-left: 25px;
+    }
+
+    .nav-menu a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent-color);
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(rgba(26, 58, 93, 0.85), rgba(26, 58, 93, 0.85)), url('https://source.unsplash.com/1600x900/?office,business') no-repeat center center/cover;
+      color: var(--light-text);
+      text-align: center;
+      padding: 100px 20px;
+      margin-top: 70px; /* Ajuste para el header fijo */
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    /* --- Secciones Generales --- */
+    .section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 25px; /* Reducido para acercar al texto */
+      color: var(--primary-color);
+    }
+    
+    .section-content {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+    }
+
+    /* --- Sobre Nosotros / Nuestro Estudio --- */
+    #about {
+        background: #fff;
+        padding-top: 80px; /* Más espacio superior */
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: left;
+      margin-top: 40px;
+    }
+    .value-item {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid var(--accent-color);
+    }
+    .value-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    /* --- Por qué elegirnos y otras secciones --- */
+     #why-us, #services, #testimonials, #how-to-start, #location, #contact {
+        padding-top: 80px; /* Espacio para el ancla del menu fijo */
+    }
+    .image-section img {
+        border-radius: 10px;
+        box-shadow: var(--card-shadow);
+        margin: 0 auto;
+    }
+
+    /* --- Servicios --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden; 
+      text-align: left;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .service-card-content {
+        padding: 25px;
+    }
+    .service-card-content h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .service-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    
+    /* --- Contacto --- */
+    #contact {
+        background: var(--primary-color);
+        color: var(--light-text);
+        padding-bottom: 60px;
+    }
+    #contact .section-title {
+        color: var(--light-text);
+    }
+    .contact-info {
+        font-size: 18px;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+    .contact-info a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+    }
+    .footer p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 820px) {
+      .nav-menu {
+        display: none;
+      }
+       .navbar {
+        justify-content: center;
+      }
+      .hero {
+        margin-top: 60px;
+      }
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 18px; }
+      .section-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="#" class="logo">Constantin & Asociados</a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#about">Nuestro Estudio</a></li>
+          <li><a href="#why-us">Por Qué Elegirnos</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#testimonials">Clientes</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Nos convertimos en el aliado de tu empresa</h1>
+        <p>"D' origine suisse depuis 1981, au service de nos clients"</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Nuestro Estudio</h2>
+        <div class="section-content">
+            <p>En Constantin & Asociados nos enfocamos en acompañar a nuestros clientes en el desarrollo y crecimiento de sus proyectos y empresas. Confiamos que el espíritu emprendedor es algo fundamental para el crecimiento y mejora de nuestra sociedad. Sabemos el enorme esfuerzo que implica crear algo inspirador desde cero, ya que muchas veces esto implica muchos desafíos y dilemas que van apareciendo a través del camino. Por eso nos propusimos desde nuestros comienzos ser un aliado en el que puedan confiar plenamente. A lo largo de nuestra trayectoria de más de 40 años, descubrimos que esto se logra a través de un compromiso férreo en nuestra vocación de servicio y de valorar por sobre todo a nuestros clientes, brindándoles un asesoramiento ejemplar y de calidad.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Misión</h4>
+                <p>Contribuir con el ejercicio profesional a través de nuestra vocación de servicio hacia la sociedad, enfocándonos en potenciar emprendedores e idealistas para el progreso de nuestra comunidad.</p>
+            </div>
+            <div class="value-item">
+                <h4>Visión</h4>
+                <p>Nuestra meta es colaborar con el éxito y crecimiento de nuestros clientes.</p>
+            </div>
+            <div class="value-item">
+                <h4>Valores</h4>
+                <p>Actitud de servicio, Innovación, Excelencia, Compromiso, Calidez y Pasión en todo lo que hacemos.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="why-us" class="section image-section">
+        <div class="container">
+             <h2 class="section-title">Por Qué Elegirnos</h2>
+             <img src="cero.jpg" alt="Por qué elegir a Constantin y Asociados">
+        </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Lo Que Hacemos Mejor</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="Uno.jpg" alt="Servicios Contables">
+            <div class="service-card-content">
+              <h3>Servicios Contables</h3>
+              <p>Confeccionamos Balances a medida para tu empresa, organizamos tus números y brindamos información clave para la toma de decisiones.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="dos.jpg" alt="Servicios de Auditoría">
+            <div class="service-card-content">
+              <h3>Servicios de Auditoría</h3>
+              <p>Mejoramos la gestión de tu empresa, enfocándonos en el control y la calidad de los procesos.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="tres.jpg" alt="Servicios Impositivos">
+            <div class="service-card-content">
+              <h3>Servicios Impositivos</h3>
+              <p>Elaboramos un planeamiento para que cumplas con tus tributos de forma eficiente, adaptándonos a las necesidades de cada cliente.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="cuatro.jpg" alt="Servicios Laborales">
+            <div class="service-card-content">
+              <h3>Servicios Laborales</h3>
+              <p>Nos ocupamos de tus liquidaciones de sueldos y te mantenemos actualizado con las últimas novedades en materia laboral.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="cinco.jpg" alt="Servicios Societarios">
+            <div class="service-card-content">
+              <h3>Servicios Societarios</h3>
+              <p>Te asesoramos para elegir el tipo societario más conveniente para tu proyecto.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="seis.jpg" alt="Servicios Financieros">
+            <div class="service-card-content">
+              <h3>Servicios Financieros</h3>
+              <p>Ordenamos y mejoramos las finanzas de tu negocio para que sean sanas y acordes a tus objetivos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section image-section" style="background-color: #fff;">
+        <div class="container">
+             <h2 class="section-title">Qué Dicen Nuestros Clientes</h2>
+             <img src="siete.jpg" alt="Opiniones de clientes de Constantin y Asociados">
+        </div>
+    </section>
+
+    <section id="how-to-start" class="section image-section">
+        <div class="container">
+             <h2 class="section-title">¿Cómo Podemos Empezar?</h2>
+             <img src="nueve.jpg" alt="Cómo podemos empezar a trabajar juntos">
+        </div>
+    </section>
+
+     <section id="location" class="section image-section" style="background-color: #fff;">
+        <div class="container">
+             <h2 class="section-title">Nuestra Ubicación</h2>
+             <img src="ocho.jpg" alt="Mapa de ubicación de Constantin y Asociados">
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contactanos</h2>
+            <div class="contact-info">
+                <p><strong>CONSTANTIN & ASOCIADOS - CONTADORES PÚBLICOS</strong></p>
+                <p>Av. San Martín 6528 - Piso 4 - A - (1419) CABA</p>
+                <p>Teléfono / WhatsApp: <a href="https://wa.me/5491176606528">11-7660-6528</a></p>
+                <p>Email: <a href="mailto:constantinyasociados@gmail.com">constantinyasociados@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>"D' origine suisse depuis 1981, au service de nos clients"</p>
+    </div>
+  </footer>
+
+</body>
+</html>
