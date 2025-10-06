@@ -7,9 +7,9 @@
   <meta name="description" content="Estudio Contable con más de 40 años de experiencia. Asesoramiento contable, impositivo, laboral y financiero." />
   <style>
     :root {
-      --primary-color: #1a3a5d; /* Azul corporativo */
-      --secondary-color: #f4f7f6; /* Fondo claro */
-      --accent-color: #d4a017; /* Dorado para acentos */
+      --primary-color: #800000; /* Bordo oscuro principal */
+      --secondary-color: #f9f6f6; /* Fondo claro ligeramente cálido */
+      --accent-color: #a02a2a; /* Bordo más claro para acentos y hover */
       --text-color: #333;
       --light-text: #fff;
       --card-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -30,6 +30,7 @@
       line-height: 1.6;
       background-color: var(--secondary-color);
       color: var(--text-color);
+      padding-top: 80px; /* Ajuste CLAVE para dejar espacio al menú fijo */
     }
 
     .container {
@@ -37,7 +38,7 @@
       max-width: 1200px;
       margin: auto;
       overflow: hidden;
-      padding: 20px 0;
+      padding: 0 20px;
     }
 
     img {
@@ -62,14 +63,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: var(--primary-color);
+    .logo-container {
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      color: var(--primary-color);
+    }
+    
+    .logo-container img {
+      height: 60px;
+      width: auto;
+      margin-right: 15px; /* Espacio entre logo y texto */
+    }
+
+    .logo-text {
+        font-size: 16px;
+        font-weight: bold;
     }
 
     .nav-menu ul {
@@ -96,11 +107,10 @@
 
     /* --- Hero Section --- */
     .hero {
-      background: linear-gradient(rgba(26, 58, 93, 0.85), rgba(26, 58, 93, 0.85)), url('https://source.unsplash.com/1600x900/?office,business') no-repeat center center/cover;
+      background: linear-gradient(rgba(128, 0, 0, 0.85), rgba(128, 0, 0, 0.85)), url('https://source.unsplash.com/1600x900/?office,business') no-repeat center center/cover;
       color: var(--light-text);
       text-align: center;
       padding: 100px 20px;
-      margin-top: 70px; /* Ajuste para el header fijo */
     }
 
     .hero h1 {
@@ -121,7 +131,7 @@
 
     .section-title {
       font-size: 36px;
-      margin-bottom: 25px; /* Reducido para acercar al texto */
+      margin-bottom: 25px;
       color: var(--primary-color);
     }
     
@@ -130,11 +140,16 @@
         margin: 0 auto 40px auto;
     }
 
-    /* --- Sobre Nosotros / Nuestro Estudio --- */
+    /* --- Sobre Nosotros / Nuestro Estudio y otras secciones --- */
+     #about, #why-us, #services, #testimonials, #how-to-start, #location, #contact {
+        padding-top: 80px; 
+        margin-top: -80px; 
+    }
+    
     #about {
         background: #fff;
-        padding-top: 80px; /* Más espacio superior */
     }
+    
     .values-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -153,10 +168,6 @@
       margin-bottom: 10px;
     }
 
-    /* --- Por qué elegirnos y otras secciones --- */
-     #why-us, #services, #testimonials, #how-to-start, #location, #contact {
-        padding-top: 80px; /* Espacio para el ancla del menu fijo */
-    }
     .image-section img {
         border-radius: 10px;
         box-shadow: var(--card-shadow);
@@ -210,13 +221,13 @@
         margin-bottom: 10px;
     }
     .contact-info a {
-        color: var(--accent-color);
+        color: #f0e68c; 
         text-decoration: none;
     }
 
     /* --- Footer --- */
     .footer {
-      background: #333;
+      background: var(--primary-color); /* <<-- CAMBIO REALIZADO AQUÍ */
       color: #fff;
       text-align: center;
       padding: 30px 0;
@@ -227,19 +238,19 @@
     }
 
     /* --- Responsive --- */
-    @media (max-width: 820px) {
+    @media (max-width: 992px) {
       .nav-menu {
         display: none;
       }
        .navbar {
         justify-content: center;
       }
-      .hero {
-        margin-top: 60px;
-      }
-      .hero h1 { font-size: 36px; }
-      .hero p { font-size: 18px; }
-      .section-title { font-size: 28px; }
+    }
+
+    @media (max-width: 480px) {
+        .logo-text {
+            display: none; 
+        }
     }
   </style>
 </head>
@@ -247,7 +258,10 @@
 
   <header class="header">
     <div class="container navbar">
-      <a href="#" class="logo">Constantin & Asociados</a>
+      <a href="#" class="logo-container">
+        <img src="logo.jpg" alt="Logo Constantin y Asociados">
+        <span class="logo-text">Constantin & Asociados<br>Contadores Públicos</span>
+      </a>
       <nav class="nav-menu">
         <ul>
           <li><a href="#about">Nuestro Estudio</a></li>
@@ -375,7 +389,7 @@
             <div class="contact-info">
                 <p><strong>CONSTANTIN & ASOCIADOS - CONTADORES PÚBLICOS</strong></p>
                 <p>Av. San Martín 6528 - Piso 4 - A - (1419) CABA</p>
-                <p>Teléfono / WhatsApp: <a href="https://wa.me/5491176606528">11-7660-6528</a></p>
+                <p>Teléfono / WhatsApp: <a href="https://wa.me/5491176606528">(54 911)-7660-6528</a></p>
                 <p>Email: <a href="mailto:constantinyasociados@gmail.com">constantinyasociados@gmail.com</a></p>
             </div>
         </div>
