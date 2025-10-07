@@ -23,6 +23,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* <<-- SOLUCIÓN a los saltos del menú */
     }
 
     body {
@@ -139,12 +140,6 @@
         max-width: 800px;
         margin: 0 auto 40px auto;
     }
-
-    /* --- Sobre Nosotros / Nuestro Estudio y otras secciones --- */
-     #about, #why-us, #services, #testimonials, #how-to-start, #location, #contact {
-        padding-top: 80px; 
-        margin-top: -80px; 
-    }
     
     #about {
         background: #fff;
@@ -227,7 +222,7 @@
 
     /* --- Footer --- */
     .footer {
-      background: var(--primary-color); /* <<-- CAMBIO REALIZADO AQUÍ */
+      background: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 30px 0;
@@ -259,7 +254,7 @@
   <header class="header">
     <div class="container navbar">
       <a href="#" class="logo-container">
-        <img src="logo.png" alt="Logo Constantin y Asociados">
+        <img src="logo.jpg" alt="Logo Constantin y Asociados">
         <span class="logo-text">Constantin & Asociados<br>Contadores Públicos</span>
       </a>
       <nav class="nav-menu">
@@ -404,4 +399,3 @@
 
 </body>
 </html>
-
